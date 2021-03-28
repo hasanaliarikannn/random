@@ -1,0 +1,16 @@
+{
+  "name": "jsonserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db": "json-server  -p 4000 db.json",
+    "tunnel": "ngrok http 4000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.16.3",
+    "ngrok": "^3.4.1"
+  }
+}
