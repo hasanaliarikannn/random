@@ -9,7 +9,7 @@ function Api() {
   const [resim, setResim] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const url = "http://localhost:4000/gunluk";
+      const url = "https://sozapi.herokuapp.com/gunluk";
       try {
         const result = await axios.get(url);
         setSöz(result.data.söz);
