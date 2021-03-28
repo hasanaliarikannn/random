@@ -9,19 +9,12 @@ function Api() {
   const [resim, setResim] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const url = "https://sozapi.herokuapp.com/soz";
+      const url = "http://localhost:4000/gunluk";
       try {
         const result = await axios.get(url);
-
-        if (result.data) {
-          let datasoz = result.data.sozler;
-          let randomsoz = Math.floor(Math.random() * datasoz.length);
-          let randomsoz_x = datasoz[randomsoz];
-          console.log(randomsoz_x);
-          setSöz(randomsoz_x.söz);
-          setYazar(randomsoz_x.yazar);
-          setResim(randomsoz_x.img);
-        }
+        setSöz(result.data.söz);
+        setYazar(result.data.yazar);
+        setResim(result.data.img);
       } catch (error) {
         console.log(error);
       }
